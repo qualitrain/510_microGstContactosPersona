@@ -27,7 +27,7 @@ public class GestorTematicas implements IGestorTematicas {
 		mTematicas.put(2,new TematicaPersona("Acuario","Proyecto Acuario",1,2));
 		mTematicas.put(3,new TematicaPersona("Compras","Portal de Compras",1,3));
 		mTematicas.put(4,new TematicaPersona("Servicio","Servicio al cliente",1,4));
-		mTematicas.put(5,new TematicaPersona("Buen Fin","Iniciativa Buen Fin 2020",2,5));
+		mTematicas.put(5,new TematicaPersona("Buen Fin","Iniciativa Buen Fin 2025",2,5));
 		mTematicas.put(6,new TematicaPersona("C.Sureste","Campaña Sureste",2,6));
 		mTematicas.put(7,new TematicaPersona("M. Izt","Proyecto Mercado Iztapalapa",2,7));
 		mTematicas.put(8,new TematicaPersona("Ventas","Avances comerciales",2,8));
