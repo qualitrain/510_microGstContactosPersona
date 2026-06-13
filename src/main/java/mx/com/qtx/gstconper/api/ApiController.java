@@ -2,6 +2,8 @@ package mx.com.qtx.gstconper.api;
 
 import java.util.List;
 
+import mx.com.qtx.gstconper.api.errores.ErrorFormato;
+import mx.com.qtx.gstconper.api.errores.ErrorNegocio;
 import mx.com.qtx.gstconper.core.NegocioException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import mx.com.qtx.gstconper.api.ErrorNegocio;
 import mx.com.qtx.gstconper.core.NegocioException;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package mx.com.qtx.gstconper.api;
+package mx.com.qtx.gstconper.api.errores;
 
 public class ErrorNegocio {
     public static final int SE_REQUIERE_PERSONA_EXISTENTE = 10001;

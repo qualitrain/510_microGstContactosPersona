@@ -1,4 +1,4 @@
-package mx.com.qtx.gstconper.api;
+package mx.com.qtx.gstconper.api.errores;
 
 public class ErrorFormato {
 	private String cveError;
