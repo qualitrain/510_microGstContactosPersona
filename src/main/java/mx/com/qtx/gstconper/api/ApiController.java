@@ -2,6 +2,7 @@ package mx.com.qtx.gstconper.api;
 
 import java.util.List;
 
+import mx.com.qtx.gstconper.core.NegocioException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,7 +32,14 @@ public class ApiController {
 		ErrorFormato err = ErrorFormato.crearErrorFormatoURI("Invocación con argumentos erróneos", 
 				                                              matmex.getMessage());
 		return new ResponseEntity<ErrorFormato>(err,HttpStatus.NOT_ACCEPTABLE);
-		
 	}
 
+	@ExceptionHandler
+	public ResponseEntity<ErrorNegocio> manejarErroresNegocio(
+			NegocioException nex){
+
+		ErrorNegocio err = ErrorNegocio.crearErrorNegocio(nex.getMessage(),nex.getRegla());
+		return new ResponseEntity<ErrorNegocio>(err,HttpStatus.NOT_ACCEPTABLE);
+
+	}
 }

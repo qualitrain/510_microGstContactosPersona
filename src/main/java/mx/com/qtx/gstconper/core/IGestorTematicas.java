@@ -6,4 +6,6 @@ import mx.com.qtx.gstconper.entidades.TematicaPersona;
 
 public interface IGestorTematicas {
 	List<TematicaPersona> getTematicasXpersona(int numPersona);
+
+	boolean personaExiste(int numPersona);
 }
