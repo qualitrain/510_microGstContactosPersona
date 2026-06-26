@@ -16,7 +16,7 @@ public class NegocioException extends RuntimeException {
     }
 
     public static NegocioException crearExceptionPersonaRequerida(int numPersona){
-        NegocioException nex = new NegocioException("persona no existe [" + numPersona + "]");
+        NegocioException nex = new NegocioException("Persona no existe [" + numPersona + "]");
         nex.setRegla("El servicio requiere que se especifique una persona que exista previamente.");
         return nex;
     }

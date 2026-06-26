@@ -1,28 +1,19 @@
 package mx.com.qtx.gstconper.api.errores;
 
-public class ErrorFormato {
-	private String cveError;
+public class ErrorFormato extends Error {
+
 	private String mensaje;
 	private String mensajeOriginal;
 
 	public static ErrorFormato crearErrorFormatoURI(String mensaje, String mensajeOriginal) {
-		ErrorFormato error = new ErrorFormato();
-		error.cveError = "INV001";
+		ErrorFormato error = new ErrorFormato(Error.ERROR_FORMATO);
 		error.mensaje = mensaje;
 		error.mensajeOriginal = mensajeOriginal;
 		return error;
 	}
 
-	public ErrorFormato() {
-		super();
-	}
-
-	public String getCveError() {
-		return cveError;
-	}
-
-	public void setCveError(String cveError) {
-		this.cveError = cveError;
+	public ErrorFormato(String cveError) {
+		super(cveError);
 	}
 
 	public String getMensaje() {
@@ -43,7 +34,7 @@ public class ErrorFormato {
 
 	@Override
 	public String toString() {
-		return "ErrorFormato [cveError=" + cveError + ", mensaje=" + mensaje + ", mensajeOriginal=" + mensajeOriginal
+		return "ErrorFormato [cveError=" + super.getCveError() + ", mensaje=" + mensaje + ", mensajeOriginal=" + mensajeOriginal
 				+ "]";
 	}
 }

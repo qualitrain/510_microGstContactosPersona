@@ -1,12 +1,13 @@
 package mx.com.qtx.gstconper.api.errores;
 
-public class ErrorNegocio {
+public class ErrorNegocio extends Error{
     public static final int SE_REQUIERE_PERSONA_EXISTENTE = 10001;
 
     private String error;
     private String regla;
 
     public ErrorNegocio(String error, String regla) {
+        super(Error.ERROR_NEGOCIO);
         this.error = error;
         this.regla = regla;
     }
@@ -30,6 +31,7 @@ public class ErrorNegocio {
     @Override
     public String toString() {
         return "ErrorNegocio{" +
+                " cveError='" + super.getCveError() + '\'' +
                 " error='" + error + '\'' +
                 ", regla='" + regla + '\'' +
                 '}';
